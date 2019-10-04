@@ -9,6 +9,3 @@ export default {
   components: { BaseLayout }
 };
 </script>
-
-<style lang="less" scoped>
-</style>

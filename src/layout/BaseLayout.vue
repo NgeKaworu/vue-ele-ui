@@ -1,25 +1,27 @@
 <template>
   <Container direction="vertical">
     <Header>
-      <BaseNav />
+      <BaseNav :routes="routes" />
     </Header>
     <Main>
       <RouterView />
     </Main>
-    <Footer>Footer</Footer>
   </Container>
 </template>
 
 <script>
-import { Container, Header, Main, Footer } from "element-ui";
+import { Container, Header, Main } from "element-ui";
 import BaseNav from "./BaseNav";
+import routes from "@/router/router.config";
 export default {
   name: "BaseLayout",
+  data: () => ({
+    routes
+  }),
   components: {
     Container,
     Header,
     Main,
-    Footer,
     BaseNav
   }
 };

@@ -2,6 +2,7 @@ export default [
   {
     path: "/",
     name: "home",
+    icon: "el-icon-s-home",
     component: () => import("@/views/Home.vue")
   },
   {
