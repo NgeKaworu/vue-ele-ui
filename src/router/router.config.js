@@ -2,7 +2,9 @@ export default [
   {
     path: "/",
     name: "home",
-    icon: "el-icon-s-home",
+    icon: {
+      render: h => <i class="el-icon-delete"></i>
+    },
     component: () => import("@/views/Home.vue")
   },
   {
