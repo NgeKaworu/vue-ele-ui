@@ -14,7 +14,6 @@ export default {
     recursion(h, routes) {
       return routes.map(route => {
         const { path, children, name, icon } = route;
-        console.log(icon);
         return this.hasChildren(route) ? (
           <Submenu index={path}>
             <template slot="title">

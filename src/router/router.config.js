@@ -1,10 +1,13 @@
+import e2c from "../utils/e2c";
+
 export default [
   {
     path: "/",
     name: "home",
-    icon: {
-      render: h => <i class="el-icon-delete"></i>
-    },
+    // icon: {
+    //   render: h => <i class="el-icon-delete"></i>
+    // },
+    icon: e2c(h => <i class="el-icon-s-home"></i>),
     component: () => import("@/views/Home.vue")
   },
   {
