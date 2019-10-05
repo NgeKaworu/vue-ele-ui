@@ -9,9 +9,6 @@
 import * as d3 from 'd3';
 import cloud from 'd3.layout.cloud-browserify';
 export default {
-  mounted() {
-    this.renderChart();
-  },
   props: {
     data: {
       type: Array,
@@ -127,6 +124,13 @@ export default {
         .on('end', draw);
 
       layout.start();
+    },
+  },
+  watch: {
+    data: {
+      handler(nv, ov) {
+        this.renderChart();
+      },
     },
   },
 };
