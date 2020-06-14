@@ -16,7 +16,7 @@ export default {
         const { path, children, name, icon } = route;
         return this.hasChildren(route) ? (
           <Submenu index={path}>
-            <template slot="title">
+            <template >
               <i class={icon} />
               {name}
             </template>
